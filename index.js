@@ -1,6 +1,6 @@
 'use-strict'
 
-var curry = require('curry');
+var curry = require('curry')
 
 function reduce(func, accum, object) {
   if (!object) {
@@ -13,18 +13,18 @@ function reduce(func, accum, object) {
 
   var result
   var keys = Object.keys(object)
+  var keysLength = keys.length
 
-  if (keys.length <= 0) {
+  if (keysLength <= 0) {
     return accum
   }
 
-  result = accum || object[keys.shift()]
+  result = accum || object[keys[0]]
 
-  keys.forEach(function(key, index) {
-    if (object.hasOwnProperty(key)) {
-      result = func(result, object[key], key, object)
-    }
-  })
+  for (var i = 1; i < keysLength; i++) {
+    var key = keys[i]
+    result = func(result, object[key], key, object)
+  }
 
   return result
 }
