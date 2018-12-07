@@ -1,9 +1,8 @@
 
 # poly-reduce
 
-
-
 ![https://travis-ci.org/koralarts/poly-reduce.svg?branch=master](https://travis-ci.org/koralarts/poly-reduce.svg?branch=master)
+
 Use reduce with not only Arrays but also with Objects in Javascript.
 
 ## Examples

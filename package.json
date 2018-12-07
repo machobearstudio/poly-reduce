@@ -2,10 +2,22 @@
   "name": "poly-reduce",
   "version": "0.1.0",
   "description": "Reduce that can be used with objects and arrays",
+  "keywords": ["reduce", "object manipulation", "array manipulation", "curry", "manipulation", "poly"],
   "main": "index.js",
-  "author": "Karl Castillo",
-  "license": "MIT",
+  "author": "Machobear Studios Inc.",
   "private": false,
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/machobearstudio/poly-reduce"
+  },
+  "contributors": [
+    {
+      "name": "Karl Castillo",
+      "email": "karl@karlworks.com",
+      "url": "https://github.com/koralarts"
+    }
+  ],
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
