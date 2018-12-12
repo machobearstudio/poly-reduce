@@ -17,16 +17,16 @@ describe('Poly Reduce', function() {
     })
   })
   describe('#2 Handle Objects', function() {
-    it('should handle empty arrays with no default value', function() {
+    it('should handle empty object with no default value', function() {
       assert.equal(reduce(x => x, undefined, {}), undefined)
     })
-    it('should handle empty arrays with default value', function() {
+    it('should handle empty object with default value', function() {
       assert.equal(reduce(x => x, 'works!', {}), 'works!')
     })
-    it('should handle array with no default value', function() {
+    it('should handle object with no default value', function() {
       assert.equal(reduce((x, y) => x ? x + y : y, undefined, { a: 1, b: 2, c: 3, d: 4, e: 5 }), 15)
     })
-    it('should handle array with default value', function() {
+    it('should handle object with default value', function() {
       assert.equal(reduce((x, y) => x + y, 0, { a: 1, b: 2, c: 3, d: 4, e: 5 }), 15)
     })
   })
