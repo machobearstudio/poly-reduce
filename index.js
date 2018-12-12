@@ -11,7 +11,7 @@ function reduce(func, accum, object) {
     return object.reduce(func, accum)
   }
 
-  var result
+  var result, i
   var keys = Object.keys(object)
   var keysLength = keys.length
 
@@ -19,9 +19,15 @@ function reduce(func, accum, object) {
     return accum
   }
 
-  result = accum || object[keys[0]]
+  if (accum === undefined || accum === null) {
+    result = object[keys[0]]
+    i = 1
+  } else {
+    result = accum
+    i = 0
+  }
 
-  for (var i = 1; i < keysLength; i++) {
+  for (; i < keysLength; i++) {
     var key = keys[i]
     result = func(result, object[key], key, object)
   }
